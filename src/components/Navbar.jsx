@@ -12,6 +12,14 @@ export default function Navbar() {
           <a href="#about" className="hover:text-blue-600">Sobre</a>
           <a href="#projects" className="hover:text-blue-600">Projetos</a>
           <a href="#contact" className="hover:text-blue-600">Contato</a>
+          <a
+            href="/CarlosArthur.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-indigo-600 hover:text-indigo-500"
+          >
+            Baixar CV
+          </a>
         </div>
         <div className="md:hidden">
           <Button onClick={() => setOpen(!open)} className="focus:outline-none">
@@ -26,6 +34,14 @@ export default function Navbar() {
           <a href="#about" className="block px-6 py-3 hover:bg-gray-100">Sobre</a>
           <a href="#projects" className="block px-6 py-3 hover:bg-gray-100">Projetos</a>
           <a href="#contact" className="block px-6 py-3 hover:bg-gray-100">Contato</a>
+          <a
+            href="/CarlosArthur.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-6 py-3 font-semibold text-indigo-600 hover:bg-gray-100"
+          >
+            Baixar CV
+          </a>
         </div>
       )}
     </nav>

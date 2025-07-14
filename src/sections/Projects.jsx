@@ -1,6 +1,7 @@
 import Card from '../components/Card';
 import todoImg from '../assets/ToDo.png';
 import avaliaImg from '../assets/AvaliaFilmes.png';
+import { motion } from 'framer-motion';
 
 const projectsData = [
   {
@@ -30,21 +31,43 @@ const projectsData = [
   }
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.6,
+      ease: 'easeOut'
+    },
+  }),
+}
+
 export default function Projects() {
   return (
     <section id='projects' className='py-20 px-6 bg-white'>
       <div className='max-w-6xl mx-auto'>
         <h2 className='text-4xl font-bold text-center mb-12'>Projetos</h2>
         <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-          {projectsData.map((proj) => (
-            <Card
+          {projectsData.map((proj, idx) => (
+            <motion.div
               key={proj.title}
-              title={proj.title}
-              techDetails={proj.techDetails}
-              imageSrc={proj.imageSrc}
-              githubLink={proj.githubLink}
-              livelink={proj.liveLink}
-            />
+              custom={idx}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+            >
+              <Card
+                key={proj.title}
+                title={proj.title}
+                techDetails={proj.techDetails}
+                imageSrc={proj.imageSrc}
+                githubLink={proj.githubLink}
+                livelink={proj.liveLink}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
