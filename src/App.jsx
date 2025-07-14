@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import About from './sections/About'
 import Navbar from './components/Navbar'
+import Projects from './sections/Projects'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <main className='flex-grow'>
         <About />
+        <Projects />
       </main>
     </div>
   )

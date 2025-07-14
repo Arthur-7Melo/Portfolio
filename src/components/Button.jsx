@@ -6,7 +6,7 @@ export default function Button({ children, onClick, href, type = 'button' }) {
 
   if (href) {
     return (
-      <a href={href} className={btnStyles}>
+      <a href={href} target='_blank' rel="noopener noreferrer" className={btnStyles}>
         {children}
       </a>
     );
