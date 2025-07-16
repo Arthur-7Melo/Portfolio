@@ -7,7 +7,13 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">Arthur Melo</div>
+        <a
+          href="/"
+          className="text-2xl font-bold text-gray-900 transition-transform transform hover:scale-105 active:scale-95"
+          aria-label="Voltar ao topo"
+        >
+          Arthur Melo
+        </a>
         <div className="hidden md:flex space-x-6">
           <a href="#about" className="hover:text-blue-600">Sobre</a>
           <a href="#projects" className="hover:text-blue-600">Projetos</a>

@@ -20,18 +20,18 @@ export default function Card({ imageSrc, title, techDetails, githubLink, livelin
             </span>
           ))}
         </div>
-      </div>
-      <div className='mt-auto flex space-x-4'>
-        {githubLink && (
-          <Button href={githubLink}>
-            Github
-          </Button>
-        )}
-        {livelink && (
-          <Button href={livelink}>
-            Ver Projeto
-          </Button>
-        )}
+        <div className='mt-auto flex space-x-4'>
+          {githubLink && (
+            <Button href={githubLink}>
+              Github
+            </Button>
+          )}
+          {livelink && (
+            <Button href={livelink}>
+              Ver Projeto
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

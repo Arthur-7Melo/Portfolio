@@ -51,8 +51,7 @@ export default function About() {
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">Sobre mim</h2>
         <p className="text-lg mb-8">
-          Sou desenvolvedor Fullstack, fazendo a transição da área de atendimento para desenvolvimento de software.
-          Apaixonado por tecnologia desde a infância, adoro aprender novas ferramentas e tornar ideias em soluções reais.
+          Como desenvolvedor Fullstack, reúno experiência para entregar soluções completas. Meu entusiasmo por tecnologia vem de longa data e me motiva a sempre aprender algo novo e concreto.
         </p>
         {techCategories.map((cat) => (
           <div key={cat.title} className="mb-8">
