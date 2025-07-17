@@ -49,7 +49,7 @@ export default function Projects() {
     <section id='projects' className='py-20 px-6 bg-white'>
       <div className='max-w-6xl mx-auto'>
         <h2 className='text-4xl font-bold text-center mb-12'>Projetos</h2>
-        <div className='grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='flex flex-wrap justify-center gap-8'>
           {projectsData.map((proj, idx) => (
             <motion.div
               key={proj.title}
@@ -58,6 +58,7 @@ export default function Projects() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
+              className="w-full sm:w-[45%] lg:w-[30%]"
             >
               <Card
                 key={proj.title}
